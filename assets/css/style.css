@@ -4,10 +4,10 @@
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -180px;
+	margin: 0 auto -100px;
 }
 .push{
-	height: 180px;
+	height: 100px;
 }
 body{
 	width: 100%;
@@ -59,30 +59,40 @@ section{
 	margin-right: auto;
 	margin-left: auto;
 	overflow: hidden;
-	height: 55em;
+	height: 58em;
 	width: 80%;
 	padding: 3em;
+}
+.content{
 	background-image: url("../images/earth-skull.png");
 	background-repeat: no-repeat;
 	background-size: 95%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border: 1px solid grey;
+
 }
 .row{
-	width: 100%;
-	overflow: hidden;
+	height: 25%;
+	border-left: 1px solid grey;
 }
 .column-left{
-	background: white;
 	width: 50%;
 	height: 100%;
 	float: left;
+	background: rgba(80, 80, 80, 0.5);
+
 }
 .column-right{
 	width: 50%;
 	height: 100%;
-	float:right;
+	float: right;
+	background: rgba(80, 80, 80, 0.5);
 }
 img{
-
+	height: 100%
+	weight: 100%;
 }
 p{
 	font-family: "Fredericka the Great";
@@ -90,19 +100,20 @@ p{
 	font-size: 1.5em;
 	text-shadow: 1px 1px 0px #fff;
 	padding: 1em;
+
 }
 
 	/*Footer Section*/
 footer{
 	width: 100%;
-	height: 100px;
+	height: 50px;
 	clear: both;
-	background: white;
-	opacity: 0.5;
+	border-top: 5px solid grey;
+	background: rgba(50,50,50,0.3);
 	font-family: Arial, Georgia, sans-serif;
 	font-size: 1em;
 	text-align: center;
-	padding-top: 80px; /*affects height of footer*/
+	padding-top: 50px; /*affects height of footer*/
 }
 	/*Media Queries*/
 @media screen  and (max-width: 1600px){
@@ -156,6 +167,9 @@ footer{
 	}
 	h3{
 		font-size: 0.7em;
+	}
+	p{
+		font-size: 1em;
 	}
 
 
