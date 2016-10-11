@@ -1,3 +1,12 @@
+//Variables
+var wins = 0; //should increment
+var guesses = 5; //should decrement
+
+//Arrays that are not included in Objects
+var lettersGuessed = []; //userInput should be pushed to end of array
+document.write(" " + wins);
+
+
 //Objects
 var worldPlaces = {
 	rome: ["Colosseum", "Pantheon", "Vatican City", "Trevi Fountain", "Sistene Chapel", "Roman Forum"],
@@ -18,17 +27,14 @@ for(i=0; i<worldPlaces.cities.length; i++){
 	worldPlaces.cities[i];
 }
 
-function word(x){
-
-
-}
+function word(x){}
 
 //Script Below
 //1. Must capture user's input key:
 	document.onkeyup = function(event){
 		//2. Defines userGuess and stores a char key input; converts to LowerCase:
 		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-		if(userGuess != [A-Za-z ])
+		if(userGuess != [A-Za-z ]){}
 	}
 
 //for(i=0; i<word.length)

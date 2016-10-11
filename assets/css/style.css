@@ -120,9 +120,6 @@ footer{
 }/*laptops -- delete after -- reference's sake*/
 
 @media screen and (max-width: 960px){
-	body{
-		background: orange;
-	}
 	section{
 		height: 40em;
 	}
@@ -136,9 +133,6 @@ footer{
 
 }/*desktop layout*/
 @media screen and (max-width: 768px){
-	body{
-		background: yellow;
-	}
 	section{
 		height: 33em;
 	}
@@ -151,9 +145,6 @@ footer{
 	}
 }/*tablet*/
 @media screen and (max-width: 650px){
-	body{
-		background: green;
-	}
 	section{
 		height: 26em;
 	}
