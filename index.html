@@ -23,20 +23,26 @@
 				</div>
 				<div class = "column-right">
 					<div class = "row">
-						<p>Wins:<script src = "assets/javascript/game.js"></script></p> <!--insert var wins js-->
+						<p>Wins:
+						<span id = "noOfWins"></span>
+						</p> 
+						<!--insert var wins js-->
 					</div>
 					<div class = "row">
 						<p>Current Word:</p>
-						<br id = "hiddenWord">
+						<div id = "hiddenWord"></div>
 						<!-- _ _ _ _ _ (word to guess) js -->
 					</div>
 					<div class = "row">
-						<p>Number of guesses left:</p>
+						<p>Number of guesses left:
+						<span id = "chances"></span>
+						</p>
 						<!-- var of remaining guesses js-->
 					</div>
 					<div class = "row">	
 						<p>Letters already guessed:</p>
 						<br>
+						<div id = "showLettersGuessed"></div>
 						<!-- array of letters already guessed (must push to array userInput) js-->
 					</div>
 				</div>

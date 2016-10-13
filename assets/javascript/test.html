@@ -45,10 +45,10 @@ var randomWord = [];
 randomWord = pushWord(randomNum);
 console.log(randomWord); //delete
 
-for(var dashes = 0; dashes < randomWord.length; dashes++){
-	randomWord.push("_");
+//for(var dashes = 0; dashes < randomWord.length; dashes++){
+	randomWord.pop("_");
 	console.log(randomWord);
-}
+//}
 
 var wordDiv = document.getElementById("hiddenWord");
 wordDiv.innerHTML = randomWord;
@@ -64,7 +64,7 @@ wordDiv.innerHTML = randomWord;
 console.log("Please guess a letter.");
 //2. On key up, should work to store user letter guess into a variable. 
 
-//GUESSES DISPLAY ON HTML
+	//GUESSES DISPLAY ON HTML
 var guessesLeft = document.getElementById("chances");
 var guesses = 15;
 
