@@ -9,7 +9,6 @@
 	</div>
 	<div class = "row">
 		<p>Current Word:</p>
-		<br>
 		<div id = "hiddenWord"></div>
 		<!-- _ _ _ _ _ (word to guess) js -->
 	</div>
@@ -29,52 +28,73 @@
 <script type="text/javascript">
 
 
-/*function pushWord(num){
-	var word = ["cat", "mouse", "dog", "bull", "cow"];
-	var guessWord = []; //goes to hidden word
-	
-	for(var i=0; i< word.length; i++){ 
-    	var randomWord = Math.floor(Math.random() * word.length);
-	}
-	guessWord.push(word[num]);
-	return guessWord;
-}//okay!
 
-var gameWord = pushWord(randomWord); //calls pushWord function //okay!
+var word = ["cat", "mouse", "dog", "bull", "cow"];
 
-gameWord = document.getElementById("hiddenWord");
-var theWord = document.createElement("br");
-theWord.innerHTML = guessWord;
-*/
+//for(var i=0; i< word.length; i++){ 
+var randomNum = Math.floor(Math.random() * word.length);
+//}
+
+function pushWord(num){
+	var randomlyGeneratedWord = [];
+	randomlyGeneratedWord.push(word[num]);
+	return randomlyGeneratedWord;
+}
+
+var randomWord = [];
+randomWord = pushWord(randomNum);
+console.log(randomWord); //delete
+
+for(var dashes = 0; dashes < randomWord.length; dashes++){
+	randomWord.push("_");
+	console.log(randomWord);
+}
+
+var wordDiv = document.getElementById("hiddenWord");
+wordDiv.innerHTML = randomWord;
+
+
+
+
 
 
 // FLOW OF GAME SHOULD FOLLOW:
 	
 //1. prompt user for guess
 console.log("Please guess a letter.");
-//2. On key up, should work to store user letter guess into a variable. which will be turned into a lowercase; should encompass all?
+//2. On key up, should work to store user letter guess into a variable. 
+
+//GUESSES DISPLAY ON HTML
+var guessesLeft = document.getElementById("chances");
+var guesses = 15;
+
 document.onkeyup = function(event){
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-	console.log(userGuess);
-
+	console.log(userGuess); //delete later
 //3. Should also store userGuess into lettersAlreadyGuessed. 
 	var lag = document.getElementById("showLettersGuessed");
-
 	var arrayOfLettersGuessed = [];
-	
-	arrayOfLettersGuessed.push(userGuess);
-
+	arrayOfLettersGuessed.push(userGuess); //stores to array userGuess
+//4. Displays letters Guessed in HTML page
 	for(var a=0; a < arrayOfLettersGuessed.length; a++){
-		
-		var letterGuessed = document.createElement("div");
-		
+		var letterGuessed = document.createElement("div");	
 		letterGuessed.innerHTML = arrayOfLettersGuessed[a];
-		
 		lag.appendChild(letterGuessed);
+		guesses--;
+		guessesLeft.innerHTML = guesses;
 	}
-
-//4.
 }
+//5. Should add while loop that ends game when guesses reach 0;
+
+//6. WINS DISPLAYED IN HTML 
+/*if(got word){
+	var wins = 0;
+	var totalWins = document.getElementById("noOfWins");
+	wins++;
+	totalWins.innerHTML = wins;
+}*/
+
+
 
 
 </script>
