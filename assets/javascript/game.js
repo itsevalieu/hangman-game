@@ -34,7 +34,7 @@ function word(x){}
 	document.onkeyup = function(event){
 		//2. Defines userGuess and stores a char key input; converts to LowerCase:
 		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-		if(userGuess != [A-Za-z ]){}
+		if(userGuess != [A-Za-z]){}
 	}
 
 //for(i=0; i<word.length)

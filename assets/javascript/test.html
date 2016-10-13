@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<div class = "row">
+		<p>Wins:<span id = "noOfWins"></span></p> <!--insert var wins js-->
+	</div>
+	<div class = "row">
+		<p>Current Word:</p>
+		<br>
+		<div id = "hiddenWord"></div>
+		<!-- _ _ _ _ _ (word to guess) js -->
+	</div>
+	<div class = "row">
+		<p>Number of guesses left:<span id = "chances"></span></p>
+	<!-- var of remaining guesses js-->
+	</div>
+	<div class = "row">	
+		<p>Letters already guessed:</p>
+		<br>
+		<div id = "showLettersGuessed"></div>
+		<!-- array of letters already guessed (must push to array userInput) js-->
+	</div>
+
+
+	
+<script type="text/javascript">
+
+
+/*function pushWord(num){
+	var word = ["cat", "mouse", "dog", "bull", "cow"];
+	var guessWord = []; //goes to hidden word
+	
+	for(var i=0; i< word.length; i++){ 
+    	var randomWord = Math.floor(Math.random() * word.length);
+	}
+	guessWord.push(word[num]);
+	return guessWord;
+}//okay!
+
+var gameWord = pushWord(randomWord); //calls pushWord function //okay!
+
+gameWord = document.getElementById("hiddenWord");
+var theWord = document.createElement("br");
+theWord.innerHTML = guessWord;
+*/
+
+
+// FLOW OF GAME SHOULD FOLLOW:
+	
+//1. prompt user for guess
+console.log("Please guess a letter.");
+//2. On key up, should work to store user letter guess into a variable. which will be turned into a lowercase; should encompass all?
+document.onkeyup = function(event){
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+	console.log(userGuess);
+
+//3. Should also store userGuess into lettersAlreadyGuessed. 
+	var lag = document.getElementById("showLettersGuessed");
+
+	var arrayOfLettersGuessed = [];
+	
+	arrayOfLettersGuessed.push(userGuess);
+
+	for(var a=0; a < arrayOfLettersGuessed.length; a++){
+		
+		var letterGuessed = document.createElement("div");
+		
+		letterGuessed.innerHTML = arrayOfLettersGuessed[a];
+		
+		lag.appendChild(letterGuessed);
+	}
+
+//4.
+}
+
+
+</script>
+
+</body>
+</html>
