@@ -1,3 +1,3 @@
-# wk3-hangman
-Tech:
-* HTML, CSS, Javascript
+# Week 3: Hangman Game
+Technologies:
+* HTML, CSS, JS
