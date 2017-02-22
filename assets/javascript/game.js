@@ -63,8 +63,8 @@ function startGame(){
 			totalGuesses--;
 		}
 	}
-		document.getElementById("hiddenWord").textContent = underscore.join(" ");	
-document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
+	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
+
 	if(totalGuesses === 0){
 		document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
 		document.getElementById("hiddenWord").textContent = cityWord;
