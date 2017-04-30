@@ -3,57 +3,59 @@
 <head>
 	<title>Hangman - Around the World</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/index.css">
+	<link rel="stylesheet" href="assets/css/header.css">
+	<link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
-	<div class = "wrapper">
+	<div class="wrapper">
 		<!--Header-->
 		<header>
 			<h1>HANGMAN</h1>
 			<h2>Around the World!</h2>
-			<h3 id = "instructions"></h3>
+			<h3 id="instructions"></h3>
 		</header>
 		
 		<!--Content Section-->
 		<section>
-			<div class = "content">
-				<div class = "column-left">
-					<!--Image of Place -->
-					<img src = "#" alt = "#">
+			<div class="column-img">
+				<!--Image of Place -->
+				<img src="#" alt="#">
+			</div>
+			<div class="column-game">
+				<div class="row">
+					<p>Wins:
+						<span id="noOfWins"></span>
+					</p> 
+					<!--insert var wins js-->
 				</div>
-				<div class = "column-right">
-					<div class = "row">
-						<p>Wins:
-						<span id = "noOfWins"></span>
-						</p> 
-						<!--insert var wins js-->
-					</div>
-					<div class = "row">
-						<p>Current Word:</p>
-						<div id = "hiddenWord"></div>
-						<!-- _ _ _ _ _ (word to guess) js -->
-					</div>
-					<div class = "row">
-						<p>Number of guesses left:
-						<span id = "chances"></span>
-						</p>
-						<!-- var of remaining guesses js-->
-					</div>
-					<div class = "row">	
-						<p>Letters already guessed:</p>
-						<br>
-						<div id = "showLettersGuessed"></div>
-						<!-- array of letters already guessed (must push to array userInput) js-->
-					</div>
+				<div class="row">
+					<p>Current Word:</p>
+					<div id="hiddenWord"></div>
+					<!-- _ _ _ _ _ (word to guess) js -->
+				</div>
+				<div class = "row">
+					<p>Number of guesses left:
+					<span id="chances"></span>
+					</p>
+					<!-- var of remaining guesses js-->
+				</div>
+				<div class="row">	
+					<p>Letters already guessed:</p>
+					<br>
+					<div id="showLettersGuessed"></div>
+					<!-- array of letters already guessed (must push to array userInput) js-->
 				</div>
 			</div>
 		</section>
-		<div class = "push"></div>
+	<!--Footer-->
+	<footer>&copy; Copyright 2016 Eva Lieu</footer>
 	</div>
-		<!--Footer-->
-		<footer>&copy; Copyright 2016 Eva Lieu</footer>
-	
-	</body>
+
+
+	<script type = "text/javascript" src = "assets/javascript/game.js"></script>
+</body>
+</html>
 <!--
 //TITLE: HANGMAN - BUNGEE INLINE/SHADE
 	//AROUND THE WORLD THEME - fredericka the great
@@ -67,8 +69,3 @@
 //Number of guesses remaining: _
 //Letters already guessed: F, A, E, B 
 -->
-
-
-	<script type = "text/javascript" src = "assets/javascript/game.js"></script>
-</body>
-</html>

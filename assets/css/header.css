@@ -1,0 +1,56 @@
+header {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3em;
+	width: 90%;
+}
+h1 {
+	color: #fefffe;
+	font-family: "Bungee Inline";
+	font-size: 9.375em;
+	text-align: center;
+	text-shadow: 10px 5px 0px #000;
+}
+h2 {
+	color: #000;
+	font-family: "Bungee Inline";
+	font-size: 3.125em;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+#instructions {
+	font-family: "Julius Sans One", Georgia;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*Media Queries*/
+@media screen  and (max-width: 1600px) {}
+@media screen and (max-width: 960px) {
+	h1 {
+		font-size: 8em;
+	}
+	h2 {
+		font-size: 2.667em;
+	}
+}
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 7em;
+	}
+	h2 {
+		font-size: 2.333em;
+	}
+}
+@media screen and (max-width: 650px) {
+	h1 {
+		font-size: 3.45em;
+	}
+	h2 {
+		font-size: 1.333em;
+		margin-top: 0.5em;
+	}
+	h3 {
+		font-size: 0.7em;
+	}
+}

@@ -1,0 +1,10 @@
+footer {
+	border-top: 5px solid #555;
+	background: rgba(50,50,50,0.4);
+	color: #fff;
+	font-family: Arial, Georgia, sans-serif;
+	font-size: 0.8em;
+	text-align: center;
+	padding: 5px 0;
+	width: 100%;
+}
