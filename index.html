@@ -22,36 +22,45 @@
 				<!--Image of Place -->
 				<img src="#" alt="#">
 			</div>
-			<div class="column-game">
-				<div class="row">
-					<p>Wins:
-						<span id="noOfWins"></span>
-					</p> 
-					<!--insert var wins js-->
-				</div>
+			<div class="column-content">
 				<div class="row">
 					<p>Current Word:</p>
-					<div id="hiddenWord"></div>
+					<div id="hiddenWord">
+						<div></div>
+					</div>
 					<!-- _ _ _ _ _ (word to guess) js -->
 				</div>
-				<div class = "row">
-					<p>Number of guesses left:
-					<span id="chances"></span>
-					</p>
-					<!-- var of remaining guesses js-->
-				</div>
-				<div class="row">	
+				<div class="row">
 					<p>Letters already guessed:</p>
 					<br>
 					<div id="showLettersGuessed"></div>
 					<!-- array of letters already guessed (must push to array userInput) js-->
+				</div>
+				<div class="row box-container">
+					<div class="box">
+						<p>Chances:
+						<span id="chances"></span>
+						</p>
+						<!-- var of remaining guesses js-->
+					</div>
+					<div class="box">
+						<p>Wins:
+						<span id="noOfWins"></span>
+						</p> 
+						<!--insert var wins js-->
+					</div>
+					<div class="box">
+						<p>Losses:
+						<span id="noOfLosses"></span>
+						</p> 
+						<!--insert var wins js-->
+					</div>
 				</div>
 			</div>
 		</section>
 	<!--Footer-->
 	<footer>&copy; Copyright 2016 Eva Lieu</footer>
 	</div>
-
 
 	<script type = "text/javascript" src = "assets/javascript/game.js"></script>
 </body>

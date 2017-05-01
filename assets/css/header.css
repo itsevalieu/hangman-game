@@ -1,20 +1,20 @@
 header {
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 3em;
+	padding-top: 1.5em;
 	width: 90%;
 }
 h1 {
 	color: #fefffe;
 	font-family: "Bungee Inline";
-	font-size: 9.375em;
+	font-size: 8em;
 	text-align: center;
 	text-shadow: 10px 5px 0px #000;
 }
 h2 {
 	color: #000;
 	font-family: "Bungee Inline";
-	font-size: 3.125em;
+	font-size: 3em;
 	margin-bottom: 0.5em;
 	text-align: center;
 }
@@ -28,18 +28,18 @@ h2 {
 @media screen  and (max-width: 1600px) {}
 @media screen and (max-width: 960px) {
 	h1 {
-		font-size: 8em;
+		font-size: 7em;
 	}
 	h2 {
-		font-size: 2.667em;
+		font-size: 2.5em;
 	}
 }
 @media screen and (max-width: 768px) {
 	h1 {
-		font-size: 7em;
+		font-size: 5em;
 	}
 	h2 {
-		font-size: 2.333em;
+		font-size: 2em;
 	}
 }
 @media screen and (max-width: 650px) {

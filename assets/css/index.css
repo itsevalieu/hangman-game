@@ -15,39 +15,47 @@ body {
 
 /*Content Section*/
 section {
-	background-image: url("../images/earth-skull.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 90%;
 	border: 1px solid black;
 	display: flex;
-	flex-flow: column;
-	height: 58em;
+	flex-flow: row;
+	height: 100%;
 	justify-content: center;
-	align-items: center;
 	padding: 1em;
-}
-.row {
-	height: 20%;
-	border: 1px solid red;
 }
 .column-img {
 	width: 100%;
-	height: 100%;
-	float: left;
-	background: rgba(100, 100, 100, 0.5);
-
-}
-.column-game {
-	width: 100%;
-	height: 100%;
-	float: right;
-	background: rgba(100, 100, 100, 0.5);
+	height: 400px;
+	background-image: url("../images/earth-skull.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+	border: 1px solid red;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
 }
 img {
 	border: 1px solid black;
 	height: 100%
 	weight: 100%;
+}
+.column-content {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-flow: column;
+	align-content: center;
+	border: 1px solid blue;
+}
+.row {
+	border: 1px solid red;
+	height: 195px;
+}
+.box-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
 }
 p {
 	font-family: "Fredericka the Great";
@@ -69,16 +77,25 @@ p {
 @media screen and (max-width: 960px) {
 	section {
 		height: 40em;
+		flex-flow: row;
+	}
+	p {
+		font-size: 1.3em;
 	}
 }
 @media screen and (max-width: 768px) {
 	section {
 		height: 33em;
+		flex-flow: column;
+	}
+	p {
+		font-size: 1.2em;
 	}
 }
 @media screen and (max-width: 650px) {
 	section {
 		height: 26em;
+		flex-flow: column;
 	}
 	p {
 		font-size: 1em;
