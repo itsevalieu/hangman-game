@@ -1,9 +1,14 @@
+var object = {
+	wordBank = ["rome", "madrid", "tokyo", "london", "athens", "paris"],
+	wins = 0,
+	losses = 0,
+	chances = 7,
+	chooseWord = function() {
+		var word = wordBank[Math.floor(Math.random() * this.wordBank.length)];
+		return word;
+	}
+};
 
-var wordBank = ["rome", "madrid", "tokyo", "london", "athens", "paris"];
-var word = wordBank[Math.floor(Math.random() * wordBank.length)];
-var wins = 0; //should increment
-var losses = 0;
-var chances = 7; //should decrement
 var userGuess;
 var lettersGuessed = []; //userInput should be pushed to end of array
 var underscore = [];
