@@ -1,4 +1,4 @@
-var object = {
+var stats = {
 	wordBank = ["rome", "madrid", "tokyo", "london", "athens", "paris"],
 	wins = 0,
 	losses = 0,
@@ -14,6 +14,55 @@ var lettersGuessed = []; //userInput should be pushed to end of array
 var underscore = [];
 
 console.log(word);
+
+/* Pseudo Code
+
+start function
+once document ready, 
+reset stats
+onkey up, start game (function)
+(function) randomly pick hidden word, show value as _ _ _
+
+ (-on key, save letter
+compare letter to word string
+if right, show letter in word, replace _
+if wrong, decrease chance by 1)
+repeat
+
+(while chance > 0){ play game } 
+ chance = 0 {
+	increase losses by 1,
+	end game, 
+
+	if user choose play again, choose new word
+	repeat
+}
+
+ 
+*/ 
+
+
+
+do { //check user's guess
+
+	//get user's guess on key up
+
+	for(var i = 0; i < word.length; i++){
+		if(guess === word[i]) {
+			//show letter(s)
+		} else {
+			stats.chances --;
+		}
+	}
+	
+} while (stats.chances > 0);
+
+
+
+
+
+
+
 
 // //Functions
 // function resetGame(){
