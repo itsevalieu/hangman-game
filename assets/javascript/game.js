@@ -97,14 +97,14 @@ function startGame(){
 
 }
 
-// function endGame() {
-// 	//For loop for allowing the player to keep playing until guesses run out:
-// 	for(var g = 1; g < chances; g++){
-// 		lettersGuessed[g]; //*NEED TO TEST RUN
-// 		document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
-// 	}
-// 	if(totalGuesses === 0){
-// 		document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
+function endGame() {
+ 	//For loop for allowing the player to keep playing until guesses run out:
+ 	for(var g = 1; g < chances; g++){
+ 		lettersGuessed[g]; //*NEED TO TEST RUN
+ 		document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
+ 	}
+ 	if(totalGuesses === 0){
+// user guesses recorded; 		document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
 // 		document.getElementById("hiddenWord").textContent = cityWord;
 // 		document.onkeyup = function(event) {
 // 			resetGame();
