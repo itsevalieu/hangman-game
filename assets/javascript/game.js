@@ -45,6 +45,10 @@ repeat
 
 do { //check user's guess
 
+	//call startGame function to begin
+	document.onkeyup = function(event){
+		startGame();
+	}
 	//get user's guess on key up
 
 	for(var i = 0; i < word.length; i++){
@@ -64,7 +68,7 @@ do { //check user's guess
 
 
 
-//Functions
+//=========Functions==========//
 function resetGame(){
 	var chances =  7;
 	var lettersGuessed = [];
@@ -78,10 +82,6 @@ function resetGame(){
 
 document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
 
-//call startGame function to begin
-document.onkeyup = function(event){
-	startGame();
-}
 
 function startGame(){
 	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
@@ -93,9 +93,10 @@ function startGame(){
 	document.onkeyup = function(event){
 		
 
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
+	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
 
-// }
+}
+
 // function endGame() {
 // 	//For loop for allowing the player to keep playing until guesses run out:
 // 	for(var g = 1; g < chances; g++){
