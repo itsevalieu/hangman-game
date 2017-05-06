@@ -64,33 +64,33 @@ do { //check user's guess
 
 
 
-// //Functions
-// function resetGame(){
-// 	var chances =  7;
-// 	var lettersGuessed = [];
-// 	var underscore = [];
-// 	var index = 0;
-// 	var userGuess;
-// 	word = wordBank[Math.floor(Math.random() * wordBank.length)];
+//Functions
+function resetGame(){
+	var chances =  7;
+	var lettersGuessed = [];
+	var underscore = [];
+	var index = 0;
+	var userGuess;
+	word = wordBank[Math.floor(Math.random() * wordBank.length)];
 	
-// 	document.getElementById("chances").textContent = chances;
-// }
+	document.getElementById("chances").textContent = chances;
+}
 
-// document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
+document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
 
-// //call startGame function to begin
-// document.onkeyup = function(event){
-// 	startGame();
-// }
+//call startGame function to begin
+document.onkeyup = function(event){
+	startGame();
+}
 
-// function startGame(){
-// 	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
-// 	document.getElementById("noOfWins").textContent = wins;
-// 	document.getElementById("chances").textContent = chances;
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");
-// 	document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
-// 	//will pick up on userGuesses
-// 	document.onkeyup = function(event){
+function startGame(){
+	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
+	document.getElementById("noOfWins").textContent = wins;
+	document.getElementById("chances").textContent = chances;
+	document.getElementById("hiddenWord").textContent = underscore.join(" ");
+	document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
+	//will pick up on userGuesses
+	document.onkeyup = function(event){
 		
 
 // 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
