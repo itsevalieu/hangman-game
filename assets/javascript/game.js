@@ -1,19 +1,20 @@
 var stats = {
-	wordBank = ["rome", "madrid", "tokyo", "london", "athens", "paris"],
-	wins = 0,
-	losses = 0,
-	chances = 7,
-	chooseWord = function() {
-		var word = wordBank[Math.floor(Math.random() * this.wordBank.length)];
-		return word;
+	wordBank: ["rome", "madrid", "tokyo", "london", "athens", "paris"],
+	wins: 0,
+	losses: 0,
+	chances: 7,
+	word: "",
+	chooseWord: function() {
+		this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
+		return this.word;
 	}
 };
 
 var userGuess;
 var lettersGuessed = []; //userInput should be pushed to end of array
 var underscore = [];
-
-console.log(word);
+stats.chooseWord();
+console.log(stats.word);
 
 /* Pseudo Code
 
@@ -94,7 +95,7 @@ function startGame(){
 		
 
 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
-
+}
 }
 
 function endGame() {
@@ -104,6 +105,10 @@ function endGame() {
  		document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
  	}
  	if(totalGuesses === 0){
+ 		console.log("cat");
+ 	}
+ 	return 0;
+};
 // user guesses recorded; 		document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
 // 		document.getElementById("hiddenWord").textContent = cityWord;
 // 		document.onkeyup = function(event) {
