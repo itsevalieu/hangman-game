@@ -109,22 +109,27 @@ function endGame() {
  	}
  	return 0;
 };
-// user guesses recorded; 		document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
-// 		document.getElementById("hiddenWord").textContent = cityWord;
-// 		document.onkeyup = function(event) {
-// 			resetGame();
-// 			startGame();
-// 		}
-// 	}else if(underscore.join("") === cityWord) {
-// 		document.getElementById("instructions").innerHTML = "Wow! You win! Please click another key to reset the game!";
-// 		wins++;
-// 		//document.getElementById("noOfWins").textContent = wins;
-// 		document.onkeyup = function(event) {
-// 			resetGame();
-// 			startGame();
-// 		}
 
-// 	}
+user guesses recorded; 		
+
+//organize below
+
+document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
+		document.getElementById("hiddenWord").textContent = cityWord;
+		document.onkeyup = function(event) {
+			resetGame();
+			startGame();
+		}
+	}else if(underscore.join("") === cityWord) {
+		document.getElementById("instructions").innerHTML = "Wow! You win! Please click another key to reset the game!";
+		wins++;
+		//document.getElementById("noOfWins").textContent = wins;
+		document.onkeyup = function(event) {
+			resetGame();
+			startGame();
+		}
+
+	}
 // }
 // function checkGuess(x) {
 // 	var userGuess = x;
