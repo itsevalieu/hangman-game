@@ -1,5 +1,5 @@
 var stats = {
-	wordBank: ["rome", "madrid", "tokyo", "london", "athens", "paris"],
+	wordBank: ["rome", "madrid", "tokyo", "london", "athens", "paris", "toledo", "sacramento", "kyoto"],
 	wins: 0,
 	losses: 0,
 	chances: 7,
@@ -44,23 +44,23 @@ repeat
 
 
 
-do { //check user's guess
+// do { //check user's guess
 
-	//call startGame function to begin
-	document.onkeyup = function(event){
-		startGame();
-	}
-	//get user's guess on key up
+// 	//call startGame function to begin
+// 	document.onkeyup = function(event){
+// 		startGame();
+// 	}
+// 	//get user's guess on key up
 
-	for(var i = 0; i < word.length; i++){
-		if(guess === word[i]) {
-			//show letter(s)
-		} else {
-			stats.chances --;
-		}
-	}
+// 	for(var i = 0; i < word.length; i++){
+// 		if(guess === word[i]) {
+// 			//show letter(s)
+// 		} else {
+// 			stats.chances --;
+// 		}
+// 	}
 	
-} while (stats.chances > 0);
+// } while (stats.chances > 0);
 
 
 
@@ -69,67 +69,67 @@ do { //check user's guess
 
 
 
-//=========Functions==========//
-function resetGame(){
-	var chances =  7;
-	var lettersGuessed = [];
-	var underscore = [];
-	var index = 0;
-	var userGuess;
-	word = wordBank[Math.floor(Math.random() * wordBank.length)];
+// //=========Functions==========//
+// function resetGame(){
+// 	var chances =  7;
+// 	var lettersGuessed = [];
+// 	var underscore = [];
+// 	var index = 0;
+// 	var userGuess;
+// 	word = wordBank[Math.floor(Math.random() * wordBank.length)];
 	
-	document.getElementById("chances").textContent = chances;
-}
+// 	document.getElementById("chances").textContent = chances;
+// }
 
-document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
+// document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
 
 
-function startGame(){
-	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
-	document.getElementById("noOfWins").textContent = wins;
-	document.getElementById("chances").textContent = chances;
-	document.getElementById("hiddenWord").textContent = underscore.join(" ");
-	document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
-	//will pick up on userGuesses
-	document.onkeyup = function(event){
+// function startGame(){
+// 	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
+// 	document.getElementById("noOfWins").textContent = wins;
+// 	document.getElementById("chances").textContent = chances;
+// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");
+// 	document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
+// 	//will pick up on userGuesses
+// 	document.onkeyup = function(event){
 		
 
-	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
-}
-}
+// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
+// }
+// }
 
-function endGame() {
- 	//For loop for allowing the player to keep playing until guesses run out:
- 	for(var g = 1; g < chances; g++){
- 		lettersGuessed[g]; //*NEED TO TEST RUN
- 		document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
- 	}
- 	if(totalGuesses === 0){
- 		console.log("cat");
- 	}
- 	return 0;
-};
+// function endGame() {
+//  	//For loop for allowing the player to keep playing until guesses run out:
+//  	for(var g = 1; g < chances; g++){
+//  		lettersGuessed[g]; //*NEED TO TEST RUN
+//  		document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
+//  	}
+//  	if(totalGuesses === 0){
+//  		console.log("cat");
+//  	}
+//  	return 0;
+// };
 
-user guesses recorded; 		
+// user guesses recorded; 		
 
-//organize below
+// //organize below
 
-document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
-		document.getElementById("hiddenWord").textContent = cityWord;
-		document.onkeyup = function(event) {
-			resetGame();
-			startGame();
-		}
-	}else if(underscore.join("") === cityWord) {
-		document.getElementById("instructions").innerHTML = "Wow! You win! Please click another key to reset the game!";
-		wins++;
-		//document.getElementById("noOfWins").textContent = wins;
-		document.onkeyup = function(event) {
-			resetGame();
-			startGame();
-		}
+// document.getElementById("instructions").innerHTML = "Out of guesses! You lost! Please click another key to reset the game!";
+// 		document.getElementById("hiddenWord").textContent = cityWord;
+// 		document.onkeyup = function(event) {
+// 			resetGame();
+// 			startGame();
+// 		}
+// 	}else if(underscore.join("") === cityWord) {
+// 		document.getElementById("instructions").innerHTML = "Wow! You win! Please click another key to reset the game!";
+// 		wins++;
+// 		//document.getElementById("noOfWins").textContent = wins;
+// 		document.onkeyup = function(event) {
+// 			resetGame();
+// 			startGame();
+// 		}
 
-	}
+// 	}
 // }
 // function checkGuess(x) {
 // 	var userGuess = x;
