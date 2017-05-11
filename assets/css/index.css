@@ -15,7 +15,7 @@ body {
 
 /*Content Section*/
 section {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	display: flex;
 	flex-flow: row;
 	height: 100%;
@@ -36,7 +36,7 @@ section {
 	align-items: center;
 }
 img {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	height: 100%
 	weight: 100%;
 }
@@ -46,10 +46,10 @@ img {
 	display: flex;
 	flex-flow: column;
 	align-content: center;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 }
 .row {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	height: 195px;
 }
 .box-container {
