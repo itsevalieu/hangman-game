@@ -16,6 +16,8 @@ var underscore = [];
 stats.chooseWord();
 console.log(stats.word);
 
+var array = stats.word.split("");
+console.log(array);
 /* Pseudo Code
 
 start function
