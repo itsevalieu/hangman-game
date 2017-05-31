@@ -55,7 +55,7 @@ img {
 .box-container {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 p {
 	font-family: "Fredericka the Great";
@@ -68,9 +68,9 @@ p {
 	text-align: center;
 	font-size: 3em;
 }
-#showLettersGuessed {
+#guessedLetters {
 	text-align: center;
-	font-size: 3em;
+	font-size: 2em;
 }
 /*Media Queries*/
 @media screen  and (max-width: 1600px) {}

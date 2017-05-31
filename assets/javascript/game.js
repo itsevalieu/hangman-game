@@ -1,23 +1,70 @@
 var stats = {
 	wordBank: ["rome", "madrid", "tokyo", "london", "athens", "paris", "toledo", "sacramento", "kyoto"],
+	guessedLetters: ["a", "b"],
+	word: "",
+	hiddenWord: [],
 	wins: 0,
 	losses: 0,
 	chances: 7,
-	word: "",
 	chooseWord: function() {
 		this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
 		return this.word;
+	},
+	hideWord: function() {
+		this.hiddenWord = this.word.split("");
+		var hiddenWordLength = this.hiddenWord.length;
+		console.log(hiddenWordLength);
+		for(var i = 0; i < hiddenWordLength; i++) {
+			this.hiddenWord[i];
+		}
+		return this.hiddenWord;
 	}
 };
+//	======================================================================
+//	Game Sequence
+//	======================================================================
+startGame();
 
-var userGuess;
-var lettersGuessed = []; //userInput should be pushed to end of array
-var underscore = [];
-stats.chooseWord();
-console.log(stats.word);
 
-var array = stats.word.split("");
-console.log(array);
+//	======================================================================
+//	Functions
+//	======================================================================
+function startGame() {
+	document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
+	document.getElementById("chances").textContent = stats.chances;
+	document.getElementById("wins").textContent = stats.wins;
+	document.getElementById("losses").textContent = stats.losses;
+	document.getElementById("guessedLetters").textContent = stats.guessedLetters.join(" ");
+	stats.chooseWord();
+	stats.hideWord();
+	document.getElementById("hiddenWord").textContent = stats.hiddenWord.join(" ");
+}
+
+
+
+
+// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");
+// 	//will pick up on userGuesses
+// 	document.onkeyup = function(event){
+		
+
+// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
+// }
+
+// var userGuess;
+// var lettersGuessed = []; //userInput should be pushed to end of array
+// var underscore = [];
+// stats.chooseWord();
+// console.log(stats.word);
+
+// //split up word into array
+// var array = stats.word.split("");
+// console.log(array);
+// var pos = stats.word.search("o");
+// console.log(pos);
+
+
+
 /* Pseudo Code
 
 start function
@@ -83,22 +130,6 @@ repeat
 // 	document.getElementById("chances").textContent = chances;
 // }
 
-// document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
-
-
-// function startGame(){
-// 	document.getElementById("instructions").innerHTML = "Instructions: Click a letter to guess!";
-// 	document.getElementById("noOfWins").textContent = wins;
-// 	document.getElementById("chances").textContent = chances;
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");
-// 	document.getElementById("showLettersGuessed").textContent = lettersGuessed.join(" ");
-// 	//will pick up on userGuesses
-// 	document.onkeyup = function(event){
-		
-
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
-// }
-// }
 
 // function endGame() {
 //  	//For loop for allowing the player to keep playing until guesses run out:
