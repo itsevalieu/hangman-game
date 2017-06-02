@@ -14,9 +14,11 @@ var stats = {
 		this.hiddenWord = this.word.split("");
 		var hiddenWordLength = this.hiddenWord.length;
 		console.log(hiddenWordLength);
+
 		for(var i = 0; i < hiddenWordLength; i++) {
 			this.hiddenWord[i];
 		}
+		
 		return this.hiddenWord;
 	}
 };
