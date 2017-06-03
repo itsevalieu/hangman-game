@@ -16,9 +16,10 @@ var stats = {
 		console.log(hiddenWordLength);
 
 		for(var i = 0; i < hiddenWordLength; i++) {
-			this.hiddenWord[i];
+			this.hiddenWord[i].replace("");
+			console.log("replaced");
+			this.hiddenWord.push("_");
 		}
-		
 		return this.hiddenWord;
 	}
 };
