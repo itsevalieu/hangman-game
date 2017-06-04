@@ -3,6 +3,7 @@ var stats = {
 	guessedLetters: ["a", "b"],
 	word: "",
 	hiddenWord: [],
+	underscoreWord: [],
 	wins: 0,
 	losses: 0,
 	chances: 7,
@@ -16,11 +17,10 @@ var stats = {
 		console.log(hiddenWordLength);
 
 		for(var i = 0; i < hiddenWordLength; i++) {
-			this.hiddenWord[i].replace("");
 			console.log("replaced");
-			this.hiddenWord.push("_");
+			this.underscoreWord.push("_");
 		}
-		return this.hiddenWord;
+		return this.underscoreWord;
 	}
 };
 //	======================================================================
@@ -40,7 +40,7 @@ function startGame() {
 	document.getElementById("guessedLetters").textContent = stats.guessedLetters.join(" ");
 	stats.chooseWord();
 	stats.hideWord();
-	document.getElementById("hiddenWord").textContent = stats.hiddenWord.join(" ");
+	document.getElementById("hiddenWord").textContent = stats.underscoreWord.join(" ");
 }
 
 
