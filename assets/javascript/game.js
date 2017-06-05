@@ -26,14 +26,15 @@ var stats = {
 //	======================================================================
 //	Game Sequence
 //	======================================================================
+document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
 startGame();
+
 
 
 //	======================================================================
 //	Functions
 //	======================================================================
 function startGame() {
-	document.getElementById("instructions").innerHTML = "Instructions: Press any key to get started!";
 	document.getElementById("chances").textContent = stats.chances;
 	document.getElementById("wins").textContent = stats.wins;
 	document.getElementById("losses").textContent = stats.losses;
@@ -41,18 +42,30 @@ function startGame() {
 	stats.chooseWord();
 	stats.hideWord();
 	document.getElementById("hiddenWord").textContent = stats.underscoreWord.join(" ");
+	document.onkeyup = function(event) {
+		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+		console.log(userGuess);
+	}
+}
+function checkGuess(x) {
+	var userGuess = x;
+	//2. Defines userGuess and stores a char key input; converts to LowerCase:
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+	var userGuessLength = userGuess.length;
+	lettersGuessed.push(userGuess);
+
+	//Logic for checking if true or not
+	for (var i = 0; i < userGuessLength; i++){
+		if(userGuess === cityWord.charAt(i)){
+			underscore[i] = cityWord.charAt(i);
+			console.log(userGuess);
+
+		} else if(userGuess !== cityWord.charAt(i)){
+			totalGuesses--;
+		}
+	}
 }
 
-
-
-
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");
-// 	//will pick up on userGuesses
-// 	document.onkeyup = function(event){
-		
-
-// 	document.getElementById("hiddenWord").textContent = underscore.join(" ");	
-// }
 
 // var userGuess;
 // var lettersGuessed = []; //userInput should be pushed to end of array
