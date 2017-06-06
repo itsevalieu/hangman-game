@@ -1,6 +1,6 @@
 var stats = {
 	wordBank: ["rome", "madrid", "tokyo", "london", "athens", "paris", "toledo", "sacramento", "kyoto"],
-	guessedLetters: ["a", "b"],
+	guessedLetters: [],
 	word: "",
 	hiddenWord: [],
 	underscoreWord: [],
@@ -21,6 +21,35 @@ var stats = {
 			this.underscoreWord.push("_");
 		}
 		return this.underscoreWord;
+	}, 
+	checkGuess: function(x) {
+		var userGuess = x;
+		
+		console.log(this.hiddenWord);
+		console.log(this.hiddenWord.length);
+
+		var cat = this.hiddenWord[0];
+		console.log(typeof cat);
+		console.log(typeof x);
+		if(cat === x) {
+			console.log("yup");
+			this.guessedLetters.push(userGuess);
+			return this.guessedLetters;
+		} else {
+			console.log("nope");
+		}
+		//Logic for checking if true or not
+		// for (var i = 0; i < this.hiddenWord.length; i++) {
+		// 	if(userGuess === this.hiddenWord.charAt(i)) {
+
+		// 		// underscore[i] = cityWord.charAt(i);
+		// 		console.log(userGuess);
+
+		// 	} else if(userGuess !== this.hiddenWord.charAt(i)){
+		// 		// totalGuesses--;
+		// 		console.log("wrong");
+		// 	}
+		// }
 	}
 };
 //	======================================================================
@@ -37,32 +66,17 @@ startGame();
 function startGame() {
 	document.getElementById("chances").textContent = stats.chances;
 	document.getElementById("wins").textContent = stats.wins;
-	document.getElementById("losses").textContent = stats.losses;
-	document.getElementById("guessedLetters").textContent = stats.guessedLetters.join(" ");
+	document.getElementById("losses").textContent = stats.losses;	
 	stats.chooseWord();
 	stats.hideWord();
 	document.getElementById("hiddenWord").textContent = stats.underscoreWord.join(" ");
 	document.onkeyup = function(event) {
 		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 		console.log(userGuess);
-	}
-}
-function checkGuess(x) {
-	var userGuess = x;
-	//2. Defines userGuess and stores a char key input; converts to LowerCase:
-	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-	var userGuessLength = userGuess.length;
-	lettersGuessed.push(userGuess);
-
-	//Logic for checking if true or not
-	for (var i = 0; i < userGuessLength; i++){
-		if(userGuess === cityWord.charAt(i)){
-			underscore[i] = cityWord.charAt(i);
-			console.log(userGuess);
-
-		} else if(userGuess !== cityWord.charAt(i)){
-			totalGuesses--;
-		}
+		stats.checkGuess(userGuess);
+		document.getElementById("guessedLetters").textContent = stats.guessedLetters.join(" ");
+		
+		// console.log(stats.)
 	}
 }
 
