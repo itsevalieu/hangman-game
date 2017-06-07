@@ -33,6 +33,9 @@ var stats = {
 		console.log(typeof x);
 		if(cat === x) {
 			console.log("yup");
+			for(var i = 0; i < this.guessedLetters.length; i++) {
+				
+			}
 			this.guessedLetters.push(userGuess);
 			return this.guessedLetters;
 		} else {
