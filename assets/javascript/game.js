@@ -10,6 +10,14 @@ var stats = {
 	chooseWord: function() {
 		this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
 		return this.word;
+
+
+		// comment out
+
+		count word length as well; 
+
+
+
 	},
 	hideWord: function() {
 		this.hiddenWord = this.word.split("");
@@ -27,7 +35,7 @@ var stats = {
 		
 		console.log(this.hiddenWord);
 		console.log(this.hiddenWord.length);
-
+f
 		var cat = this.hiddenWord[0];
 		console.log(typeof cat);
 		console.log(typeof x);
