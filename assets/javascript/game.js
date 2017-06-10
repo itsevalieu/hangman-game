@@ -10,14 +10,6 @@ var stats = {
 	chooseWord: function() {
 		this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
 		return this.word;
-
-
-		// comment out
-
-		count word length as well; 
-
-
-
 	},
 	hideWord: function() {
 		this.hiddenWord = this.word.split("");
@@ -61,6 +53,9 @@ f
 		// 		console.log("wrong");
 		// 	}
 		// }
+	},
+	showWord: function() {
+		return word;
 	}
 };
 //	======================================================================
