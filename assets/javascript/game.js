@@ -27,7 +27,6 @@ var stats = {
 		
 		console.log(this.hiddenWord);
 		console.log(this.hiddenWord.length);
-f
 		var cat = this.hiddenWord[0];
 		console.log(typeof cat);
 		console.log(typeof x);
